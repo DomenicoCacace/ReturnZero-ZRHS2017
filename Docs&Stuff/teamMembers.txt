@@ -1,0 +1,68 @@
+ReturnZero-ZRHS2017
+Team Ladder
+
+//TODO: fill email fields
+
+
+teamMentor{
+  surname -> Cacace
+  name -> Domenico
+  mobile -> 339 207 9543
+  email -> cacace.d98@gmail.com
+  email -> domenico.cacace@mail.polimi.it
+  class -> external member
+}
+
+teamLeader_1{
+  surname -> Bruni
+  name -> Alessia
+  mobile -> 339 777 6412
+  email -> elassia99@gmail.com
+  class -> 5D
+}
+
+teamLeader_2{
+  surname -> De Simone
+  name -> Eugenio
+  mobile -> 366 870 2221
+  email -> eugenio12simone@gmail.com
+  class -> 5D
+}
+
+teacher_1{
+  surname -> Cafiero
+  name -> Giovanna
+  mobile -> 338 839 9019
+  email ->
+}
+
+teacher_2{
+  surname -> Cafiero
+  name -> Tobia
+  mobile -> 338 644 3825
+  email ->
+}
+
+teamMember_1{
+  surname -> Sorrentino
+  name -> Giovanni
+  mobile -> 338 204 2968
+  email ->
+  class -> 5D
+}
+
+teamMember_2{
+  surname -> Russo
+  name -> Luigi
+  mobile -> 339 664 6881
+  email ->
+  class -> 5D
+}
+
+teamMember_3{
+  surname -> Cardellicchio
+  name -> Luca
+  mobile -> 331 204 3459
+  email ->
+  class -> 5D
+}
