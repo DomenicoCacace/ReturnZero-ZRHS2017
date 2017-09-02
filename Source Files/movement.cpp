@@ -1,10 +1,13 @@
-/*movement.cpp
+/*
+ *  movement.cpp
  *
  *Contiene le funzioni relative al movimento lineare del satellite
  *TODO: regolare i moltiplicatori per i thruster
  */
 
 float goToPos(float *target) {    //per spostare il nostro satellite dal punto attuale al punto designato dal parametro
+   //target: punto di arrivo della traiettoria
+   
    getMyPos(myPos);   //vedi pagina misc.cpp
 
    float distanza = dist(target);   //calcoliamo la distanza tra noi e il target per gestire i propulsori
