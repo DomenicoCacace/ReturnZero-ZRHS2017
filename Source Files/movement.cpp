@@ -7,13 +7,13 @@
 
 float goToPos(float *target) {    //per spostare il nostro satellite dal punto attuale al punto designato dal parametro
    //target: punto di arrivo della traiettoria
-   
-   getMyPos(myPos);   //vedi pagina misc.cpp
+
+   getMyPos(myPos);   //vedi pagina status.cpp
 
    float distanza = dist(target);   //calcoliamo la distanza tra noi e il target per gestire i propulsori
    float vel = distanza * 0.14f;    //moltiplicatore per la velocità
 
-   if(distanza < brakeDist)   //valutiamo se accelerare o frenare. brakeDist va allocata nel main per questioni di comodità
+   if(distanza < brakeDist)   //valutiamo se accelerare o frenare. brakeDist va allocata nel main per questioni di p̶i̶g̶r̶i̶z̶i̶a̶  comodità
        brake();   //vedi sotto
 
     else {
@@ -29,7 +29,7 @@ float goToPos(float *target) {    //per spostare il nostro satellite dal punto a
     }
 }
 
-void brake(){   //per rallentare il nostro satellite fino a fermarlo. Forse.
+void brake() {   //per rallentare il nostro satellite fino a fermarlo. Forse.
     float myVel[3];
     float myState[12];
 
