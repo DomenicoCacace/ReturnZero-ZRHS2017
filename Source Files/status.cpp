@@ -18,3 +18,9 @@ void getMyAtt() {    //copia l'orientamento attuale del satellite nel vettore gl
   api.getMyZRState(myState);  //chiamo getMyZRState per copiare in myState lo stato del satellite
   copyArray(myState, x, 6, 3);    //copio in x gli elementi 6, 7 e 8 del vettore myState, che contengono l'orientamento del satellite
  }
+
+ void getMyVel() {    //copia la velocità lineare attuale del satellite nel vettore globale myVel
+
+   api.getMyZRState(myState);  //chiamo getMyZRState per copiare in myState lo stato del satellite
+   copyArray(myState, x, 3, 3);    //copio in x gli elementi 6, 7 e 8 del vettore myState, che contengono l'orientamento del satellite
+  }
