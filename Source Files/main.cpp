@@ -13,7 +13,7 @@ float   myAtt[3];       //contiene l'orientamento del satellite al tempo dell'ul
 float   myVel[3];       //contiene la velocità lineare del satellite al tempo ell'ultima chiamata alla funzione getMyVel
 
 //variabili utili alle funzioni di rotazione
-float   virtualPoint;   //utilizzata per creare un punto virtuale per la rotazione sull'asse Z di 180°
+float   virtualPoint[3];   //utilizzata per creare un punto virtuale per la rotazione sull'asse Z di 180°
 
 //Variabili varie: non compongono una classe specifica di variabili, ma servono. Molto.
 float   approximation;  //contiene il margine di approssimazione generico (vedi misc.cpp -> compareVector(args))
@@ -22,7 +22,7 @@ char    index;          //utilizzato per scorrere tra i case dello switch che  �
 
 //variabili di gioco
 
-analyzerPos[3];     //coordinate dell'analizzatore
+float   analyzerPos[3];     //coordinate dell'analizzatore
 
 
 //INIZIALIZZAZIONE
@@ -56,12 +56,12 @@ void loop() {
     case '0':
       goToPos(analyzerPos);   //andiamo verso l'analizzatore più vicino
       if(weGotThis(analyzerPos))  //se arriviamo all'analizzatore E abbiamo una velocità bassa
-        case = '1';
+        index = '1';
       break;
 
     case '1':
       findRotationVirtualPoint();   //assegna in virtualPoint i parametri per setAttitudeTarget per ruotare di 180°
-      case = '2';
+      index = '2';
       break;
 
     case '2':

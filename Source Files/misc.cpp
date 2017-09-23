@@ -43,7 +43,7 @@ float dist(float targetPos[]) {   //ritorna la distanza tra il nostro satellite 
 
     float tempVec[3];
 
-    getMyPos(myPos);
+    getMyPos();
 
 	  mathVecSubtract(tempVec,targetPos,myPos,3);    //per la spiegazione consultare le slide disponibili nei tutorial
 
@@ -54,6 +54,6 @@ char ourColor() {     //ritorna il colore del nostro satellite come 'B' o 'R'
   getMyPos();
   if(myPos[1] > 0)
     return 'B';
-    
+
   return 'R';
 }

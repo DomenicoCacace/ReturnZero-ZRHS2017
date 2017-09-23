@@ -13,5 +13,5 @@ bool weGotThis(float *target) {     //verifica se il satellite arriva nel punto 
     if((myVel[0] > 0.006f) || (myVel[1] > 0.006f) || (myVel[2] > 0.006f))
       return(false);
 
-    return(compareVector(myPos, point, approximation));
+    return(compareVector(myPos, target, approximation));
 }
