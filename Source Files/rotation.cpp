@@ -4,7 +4,7 @@
  *Contiene le funzioni relative al moto rotativo del satellite attorno ad un asse
  */
 
-void rotate180deg() {     //crea un vettore (virtualPoint) in cui assegna i parametri per ruotare di 180° grazie a setAttitudeTarget 
+void findRotationVirtualPoint() {     //crea un vettore (virtualPoint) in cui assegna i parametri per ruotare di 180° grazie a setAttitudeTarget 
     api.getMyZRState(myState);
     getMyAtt(myAtt);
 

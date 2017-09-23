@@ -21,6 +21,8 @@ float   myState[12];    //utilizzato per lavorare su getMyZRState, contiene tutt
 float   myPos[3];       //contiene le coordinate del satellite al tempo dell'ultima chiamata alla funzione getMyPos
 float   myAtt[3];       //contiene l'orientamento del satellite al tempo dell'ultima chiamata alla funzione getMyAtt
 
+float   virtualPoint;   //utilizzata per creare un punto virtuale per la rotazione sull'asse Z di 180°
+
 //Variabili varie: non compongono una classe specifica di variabili, ma servono. Molto.
 float   approximation;  //contiene il margine di approssimazione generico (vedi misc.cpp -> compareVector(args))
 float   brakeDist;      //contiene la distanza dalla quale il satellite inizia a frenare (vedi movement.cpp -> goToPos())
