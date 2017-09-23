@@ -30,9 +30,8 @@ float goToPos(float *target) {    //per spostare il nostro satellite dal punto a
 }
 
 void brake() {   //per rallentare il nostro satellite fino a fermarlo. Forse.
-    float myState[12];
 
-    api.getMyZRState(myState);    //prendiamo i valori dell'accelerazione lineare
+    getMyVel();   //prendiamo i valori della velocità lineare
 
     myVel[0] = (myState[3]*3.2)*-1.15;    //la moltiplichiamo per valori negativi
     myVel[1] = (myState[4]*3.2)*-1.15;
