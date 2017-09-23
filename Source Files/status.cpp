@@ -7,15 +7,13 @@
  *
  */
 
-void getMyPos(float *x) {    //copia la posizione attuale del satellite nel vettore designato
-    //x: vettore "di ritorno" contenente la posizione del satellite nello spazio
+void getMyPos() {    //copia la posizione attuale del satellite nel vettore globale myPos
 
     api.getMyZRState(myState);  //chiamo getMyZRState per copiare in myState lo stato del satellite
     copyArray(myState, x, 0, 3);    //copio in x gli elementi 0, 1 e 2 del vettore myState, che contengono le coordinate del satellite nello spazio
   }
 
-void getMyAtt(float *x) {    //copia l'orientamento attuale del satellite nel vettore designato
-  //x: vettore "di ritorno" contenente l'orientamento del satellite
+void getMyAtt() {    //copia l'orientamento attuale del satellite nel vettore globale myAtt
 
   api.getMyZRState(myState);  //chiamo getMyZRState per copiare in myState lo stato del satellite
   copyArray(myState, x, 6, 3);    //copio in x gli elementi 6, 7 e 8 del vettore myState, che contengono l'orientamento del satellite
