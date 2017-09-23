@@ -32,21 +32,41 @@ void init() {
   approximation = 0.02f;    //imposto l'approssimazione. Modificare con cautela
   brakeDist = 0.03;   //imposto la distanza di frenata. TODO: definire una funzione che calcoli brakeDist con criterio, non a caso
 
-  //Varie ed eventuali
+  if(ourColor() == 'B') {   //codice analizzatore 1
+    analyzerPos[0] = -0.30;
+    analyzerPos[1] = 0.48;
+    analyzerPos[2] = 0.0;
+  }
+  else {    //codice analizzatore 0
+    analyzerPos[0] = 0.30;
+    analyzerPos[1] = -0.48;
+    analyzerPos[2] = 0.0;
+  }
 }
 
 void loop() {
   //Istruzioni da ripetere indipendentemente dal case vanno qui
+  if(game.getDrillError()) {
+    game.stopDrill();
+    //TODO: "mandare un interrupt" per notificare che abbiamo un problema
+  }
+
 
   switch(index){
     case '0':
-      //non penso di dover spiegare come funzioni, dai
-      if(true)
-        case = 'n';   //non volete loopare nello stesso case per sempre, fidatevi
+      goToPos(analyzerPos);   //andiamo verso l'analizzatore più vicino
+      if(weGotThis(analyzerPos))  //se arriviamo all'analizzatore E abbiamo una velocità bassa
+        case = '1';
       break;
 
-    case 'n':
-      //aggiungetene quanti necessari, ma usando la testa
+    case '1':
+      findRotationVirtualPoint();   //assegna in virtualPoint i parametri per setAttitudeTarget per ruotare di 180°
+      case = '2';
+      break;
+
+    case '2':
+      api.setAttitudeTarget(virtualPoint);    //ruotiamo verso il punto virtuale
+      game.startDrill();    //e cominciamo a trapanare
       break;
   }
 
