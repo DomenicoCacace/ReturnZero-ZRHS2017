@@ -8,7 +8,7 @@
 float goToPos(float *target) {    //per spostare il nostro satellite dal punto attuale al punto designato dal parametro
    //target: punto di arrivo della traiettoria
 
-   getMyPos(myPos);   //vedi pagina status.cpp
+   getMyPos();   //vedi pagina status.cpp
 
    float distanza = dist(target);   //calcoliamo la distanza tra noi e il target per gestire i propulsori
    float vel = distanza * 0.14f;    //moltiplicatore per la velocità
@@ -30,7 +30,6 @@ float goToPos(float *target) {    //per spostare il nostro satellite dal punto a
 }
 
 void brake() {   //per rallentare il nostro satellite fino a fermarlo. Forse.
-    float myVel[3];
     float myState[12];
 
     api.getMyZRState(myState);    //prendiamo i valori dell'accelerazione lineare
