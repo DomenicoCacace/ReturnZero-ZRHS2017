@@ -10,6 +10,7 @@
 float   myState[12];    //utilizzato per lavorare su getMyZRState, contiene tutte le informazioni riguardanti il satellite
 float   myPos[3];       //contiene le coordinate del satellite al tempo dell'ultima chiamata alla funzione getMyPos
 float   myAtt[3];       //contiene l'orientamento del satellite al tempo dell'ultima chiamata alla funzione getMyAtt
+float   myVel[3];       //contiene la velocità lineare del satellite al tempo ell'ultima chiamata alla funzione getMyVel
 
 //variabili utili alle funzioni di rotazione
 float   virtualPoint;   //utilizzata per creare un punto virtuale per la rotazione sull'asse Z di 180°
